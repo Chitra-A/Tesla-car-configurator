@@ -4,12 +4,12 @@ import { SelectedModel, SelectedConfig } from './types';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-step-3',
+  selector: 'app-step-three',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './step3.component.html'
+  templateUrl: './step-three.component.html'
 })
-export class Step3Component {
+export class StepThreeComponent {
 
   selectedModel: SelectedModel = {
     code: '',
