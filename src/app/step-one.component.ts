@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-step-1',
+  selector: 'app-step-one',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './step1.component.html',
+  templateUrl: './step-one.component.html',
 })
-export class Step1Component implements OnInit {
+export class StepOneComponent implements OnInit {
   apiData: ApiDataModel[] = [];
   selectedModelCode: string = '';
   selectedColorCode: string = '';

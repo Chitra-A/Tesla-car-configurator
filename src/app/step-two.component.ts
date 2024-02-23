@@ -6,12 +6,12 @@ import { CommonModule } from '@angular/common';
 import { SelectedModel, SelectedConfig, ConfigsModel } from './types';
 
 @Component({
-  selector: 'app-step-2',
+  selector: 'app-step-two',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './step2.component.html'
+  templateUrl: './step-two.component.html'
 })
-export class Step2Component {
+export class StepTwoComponent {
 
   selectedModel: SelectedModel;
   selectedConfig: SelectedConfig | string = '';
