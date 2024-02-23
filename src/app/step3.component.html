@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Step 3: Summary</h1>
+        <h3>Your {{ selectedModel.description }} Car</h3>
+
+        <div>
+            <p>{{ selectedConfig.description }} - ${{ selectedConfig.price  }}</p>
+            <p>Range: {{selectedConfig.range}} miles, Max speed: {{selectedConfig.speed}}</p>
+            <p> {{ selectedModel.colorDesc }} Color - ${{ selectedModel.price }}</p>
+            <p *ngIf="selectedConfig.yoke">Yoke Package - $1000</p>
+            <p *ngIf="selectedConfig.tow">Tow Hitch Package - $1000</p>
+            <p>TOTAL COST - ${{ selectedConfig.price + selectedModel.price + (selectedConfig.yoke? 1000 : 0) + (selectedConfig.tow? 1000 : 0) }}</p>
+        </div>
+
+        <img  [src]="'https://interstate21.com/tesla-app/images/' + selectedModelCode + '/' + selectedColorCode + '.jpg'" alt="Car Image">
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <h1>Step 2: Select your config and options</h1>
+
+    <div>
+        Config:
+        <select id="configSelect" [(ngModel)]="selectedConfig" (ngModelChange)="onConfigChange()">
+            <option value="" disabled selected>Choose...</option>
+            <option *ngFor="let config of configOptions.configs" [ngValue]="config">{{config.description}}</option>
+        </select>
+    </div>
+
+    <div *ngIf="selectedConfig">
+        <p>{{displayText}}</p>
+    </div>
+
+    <div *ngIf="configOptions.towHitch">
+        <input type="checkbox" id="includeTow" (change)="onCheckboxChange()" [(ngModel)]="includeTow" >
+        <label for="includeTow">Tow Hitch</label>
+    </div>
+
+    <div *ngIf="configOptions.yoke">
+        <input type="checkbox" id="includeYoke" (change)="onCheckboxChange()"  [(ngModel)]="includeYoke">
+        <label for="includeYoke">Yoke</label>
+    </div>
+    <img  [src]="'https://interstate21.com/tesla-app/images/' + selectedModelCode + '/' + selectedColorCode + '.jpg'" alt="Car Image">
+</body>
+
+</html>

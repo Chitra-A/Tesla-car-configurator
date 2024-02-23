@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Tesla Configuration</title>
+  </head>
+
+  <body>
+
+    <div>
+
+      <button id="step1" (click)="goToRoute('/step1')">Step 1</button>
+      <button id="step2" [disabled]="!dataService.selectedModel.code" (click)="goToRoute('/step2')">Step 2</button>
+      <button id="step3" [disabled]="!dataService.selectedConfig.id" (click)="goToRoute('/step3')">Step 3</button>
+      
+    </div>
+
+    <router-outlet></router-outlet>
+  </body>
+</html>
