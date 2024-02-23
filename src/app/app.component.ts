@@ -31,6 +31,6 @@ export class AppComponent {
   ngOnInit(): void {
     this.dataService.resetData();
     this.getDataFromApi();
-    setTimeout(() => this.router.navigate(['/step1']), 500);
+    setTimeout(() => this.router.navigate(['/step1']), 1000);
   }
 }
